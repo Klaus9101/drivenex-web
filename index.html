@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveNex | Your Smart Mobility Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">DriveNex</div>
+        <div class="language-switcher">
+            <button data-lang="en">English</button>
+            <button data-lang="zh">中文</button>
+            <button data-lang="ms">Bahasa Melayu</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 id="hero-title">Find Your Perfect Vehicle</h1>
+            <p id="hero-subtitle">AI-powered recommendations for cars and motorcycles in Malaysia</p>
+            
+            <div class="recommendation-form">
+                <div class="form-group">
+                    <label for="budget">Your Budget (RM)</label>
+                    <input type="number" id="budget" placeholder="e.g. 30,000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="purpose">Main Purpose</label>
+                    <select id="purpose">
+                        <option value="family">Family Use</option>
+                        <option value="commute">Daily Commute</option>
+                        <option value="work">Work/Business</option>
+                        <option value="adventure">Adventure/Touring</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="passengers">Passengers</label>
+                    <input type="number" id="passengers" placeholder="e.g. 2" min="1" max="10">
+                </div>
+                
+                <button class="cta-button" onclick="getRecommendations()">
+                    Find My Vehicle
+                </button>
+            </div>
+        </section>
+
+        <section class="results" id="results">
+            <h2>Recommended Vehicles</h2>
+            <div class="results-container" id="results-container">
+                <!-- Results will appear here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>DriveNex &copy; 2025 - Your Smart Mobility Guide</p>
+        <p>Email: hello@drivenex.my</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
