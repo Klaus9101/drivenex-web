@@ -1,0 +1,244 @@
+/* === Global Styles === */
+:root {
+    --primary: #2563EB;
+    --secondary: #F97316;
+    --dark: #1E293B;
+    --light: #F8FAFC;
+    --gray: #64748B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+/* === Header Styles === */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.language-switcher button {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.language-switcher button:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* === Hero Section === */
+.hero {
+    text-align: center;
+    padding: 4rem 5%;
+    background: linear-gradient(135deg, var(--primary) 0%, #1D4ED8 100%);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.recommendation-form {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.cta-button {
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    font-weight: 600;
+}
+
+.cta-button:hover {
+    background-color: #EA580C;
+}
+
+/* === Results Section === */
+.results {
+    padding: 4rem 5%;
+}
+
+.results h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark);
+}
+
+.results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.vehicle-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+}
+
+.vehicle-image {
+    height: 180px;
+    background: #E2E8F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+}
+
+.vehicle-details {
+    padding: 1.5rem;
+}
+
+.vehicle-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.vehicle-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+
+.vehicle-specs {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.spec-item {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+    border-right: 1px solid #E2E8F0;
+}
+
+.spec-item:last-child {
+    border-right: none;
+}
+
+.spec-label {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.spec-value {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.recommendation-reason {
+    background: #F0F9FF;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: var(--dark);
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--dark);
+    color: white;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .language-switcher {
+        margin-top: 1rem;
+    }
+    
+    .hero {
+        padding: 2rem 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .recommendation-form {
+        padding: 1.5rem;
+    }
+}
